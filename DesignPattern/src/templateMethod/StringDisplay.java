@@ -12,20 +12,17 @@ public class StringDisplay extends AbstractDisplay {
 
 	@Override
 	public void open() {
-		// TODO 自動生成されたメソッド・スタブ
 		printLine();
 
 	}
 
 	@Override
 	public void print() {
-		// TODO 自動生成されたメソッド・スタブ
 		System.out.println("|" + str + "|");
 	}
 
 	@Override
 	public void close() {
-		// TODO 自動生成されたメソッド・スタブ
 		printLine();
 	}
 
