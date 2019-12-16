@@ -3,8 +3,8 @@ package factoryMethod.idcard;
 import java.util.ArrayList;
 import java.util.List;
 
-import ch4_FactoryMethod.framework.Factory;
-import ch4_FactoryMethod.framework.Product;
+import factoryMethod.framework.Factory;
+import factoryMethod.framework.Product;
 
 public class IDCardFactory extends Factory {
 
