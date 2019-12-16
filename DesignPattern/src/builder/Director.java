@@ -7,7 +7,6 @@ class Director {
 		this.builder = builder;
 	}
 
-	// 構築？
 	void construct() {
 		builder.makeTitle("Greeting");
 		builder.makeString("朝から昼にかけて");
@@ -23,5 +22,4 @@ class Director {
 		});
 		builder.close();
 	}
-
 }

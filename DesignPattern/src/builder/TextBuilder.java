@@ -27,7 +27,6 @@ class TextBuilder extends Builder {
 
 	@Override
 	public void close() {
-		// TODO 自動生成されたメソッド・スタブ
 		sb.append("==========\n");
 	}
 
