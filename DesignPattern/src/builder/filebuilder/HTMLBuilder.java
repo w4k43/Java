@@ -1,16 +1,17 @@
-package builder;
+package builder.filebuilder;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-class HTMLBuilder extends Builder {
+public class HTMLBuilder extends Builder {
 	private String fileName;
 	private PrintWriter writer;
 
+	// Director内で呼び出される
+	// 利用側Mainクラスからは呼ばれる想定がないのでpackage private
 	@Override
-	public void makeTitle(String title) {
-		// FIXME 生焼けになるのでは？ 呼び出しを制限するからよい？
+	void makeTitle(String title) {
 		fileName = title + ".html";
 		try {
 			writer = new PrintWriter(new FileWriter(fileName));
@@ -23,12 +24,12 @@ class HTMLBuilder extends Builder {
 	}
 
 	@Override
-	public void makeString(String str) {
+	void makeString(String str) {
 		writer.println("<p>" + str + "</p>");
 	}
 
 	@Override
-	public void makeItems(String[] items) {
+	void makeItems(String[] items) {
 		writer.println("<ul>");
 		for (String item : items) {
 			writer.println("<li>" + item + "</li>");
@@ -37,11 +38,12 @@ class HTMLBuilder extends Builder {
 	}
 
 	@Override
-	public void close() {
+	void close() {
 		writer.println("</body></html>");
 		writer.close();
 	}
 
+	// 利用側Mainからはこのメソッドのみ呼ぶ。
 	public String getResult() {
 		return fileName;
 	}

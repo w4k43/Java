@@ -1,5 +1,9 @@
 package builder;
 
+import builder.filebuilder.Director;
+import builder.filebuilder.HTMLBuilder;
+import builder.filebuilder.TextBuilder;
+
 class Main {
 	public static void main(String[] args) {
 		if (args.length != 1) {
@@ -7,7 +11,6 @@ class Main {
 			System.exit(0);
 		}
 		if (args[0].equals("plain")) {
-			// Builder = にすべきでは？
 			TextBuilder builder = new TextBuilder();
 			Director director = new Director(builder);
 			director.construct();

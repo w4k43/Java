@@ -1,24 +1,26 @@
-package builder;
+package builder.filebuilder;
 
-class TextBuilder extends Builder {
+public class TextBuilder extends Builder {
 	private StringBuilder sb = new StringBuilder();
 
+	// Director内で呼び出される
+	// 利用側Mainクラスからは呼ばれる想定がないのでpackage private
 	@Override
-	public void makeTitle(String title) {
+	void makeTitle(String title) {
 		sb.append("==========\n");
 		sb.append("[" + title + "]\n");
 		sb.append("\n");
 	}
 
 	@Override
-	public void makeString(String str) {
+	void makeString(String str) {
 		sb.append('■' + str + "\n");
 		sb.append("\n");
 
 	}
 
 	@Override
-	public void makeItems(String[] items) {
+	void makeItems(String[] items) {
 		for (String s : items) {
 			sb.append("・" + s + "\n");
 		}
@@ -26,10 +28,11 @@ class TextBuilder extends Builder {
 	}
 
 	@Override
-	public void close() {
+	void close() {
 		sb.append("==========\n");
 	}
 
+	// 利用側Mainからはこのメソッドのみ呼ぶ。
 	public String getResult() {
 		return sb.toString();
 
