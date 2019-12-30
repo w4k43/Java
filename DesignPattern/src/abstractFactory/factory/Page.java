@@ -4,11 +4,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Page {
 	protected String title;
 	protected String author;
-	protected ArrayList content = new ArrayList<>();
+	protected List content = new ArrayList<>();
 
 	public Page(String title, String author) {
 		this.title = title;

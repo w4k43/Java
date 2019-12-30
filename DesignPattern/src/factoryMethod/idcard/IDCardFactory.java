@@ -10,16 +10,14 @@ public class IDCardFactory extends Factory {
 
 	private List owners = new ArrayList();
 
+	// 継承元がprotectedのため
 	@Override
 	protected Product createProduct(String owner) {
-		// TODO 自動生成されたメソッド・スタブ
-
 		return new IDCard(owner);
 	}
 
 	@Override
 	protected void registerProduct(Product product) {
-		// TODO 自動生成されたメソッド・スタブ
 		owners.add(((IDCard) product).getOwner());
 	}
 

@@ -22,4 +22,11 @@ public abstract class Factory {
 
 	public abstract Page createPage(String title, String author);
 
+	public Page createYahooPage() {
+		Page yahooPage = createPage("Yahoo!", "Yahoo!");
+		Link l = createLink("Yahoo", "http://www.yahoo.com/");
+		yahooPage.add(l);
+		return yahooPage;
+	}
+
 }

@@ -2,7 +2,7 @@ package abstractFactory.tablefactory;
 
 import abstractFactory.factory.Link;
 
-public class TableLink extends Link {
+class TableLink extends Link {
 
 	public TableLink(String caption, String url) {
 		super(caption, url);

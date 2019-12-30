@@ -5,7 +5,7 @@ import java.util.Iterator;
 import abstractFactory.factory.Item;
 import abstractFactory.factory.Page;
 
-public class TablePage extends Page {
+class TablePage extends Page {
 
 	public TablePage(String title, String author) {
 		super(title, author);

@@ -5,7 +5,7 @@ import java.util.Iterator;
 import abstractFactory.factory.Item;
 import abstractFactory.factory.Tray;
 
-public class TableTray extends Tray {
+class TableTray extends Tray {
 
 	public TableTray(String caption) {
 		super(caption);
